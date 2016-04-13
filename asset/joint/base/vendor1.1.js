@@ -21552,12 +21552,8 @@ var E = Easy = {
 			if(callback)callback();
 			return;
 		}
-		if(S.get("config").hash.deving == "jiayou"){
-			script.src = "/asset/dev/async/"+page+".js"+"?"+version;
-		}else{
-			script.src = "http://static.seeyouyima.com/joint.meiyou.com/manage/async/"+page+".js"+"?"+version;
-		}
-
+			script.src = "../asset/dev/async/"+page+".js"+"?"+version;
+		
 		script.onload = function(){
 			if(callback)callback();
 		};

@@ -12236,3 +12236,50 @@ ul li.ant-transfer-list-highlight-enter {
 /*# sourceMappingURL=antd.css.map*/@charset "UTF-8";
 /* 色系 */
 /* 几行文字 */
+.banner {
+  display: -webkit-box;
+  padding: 0 20px;
+}
+
+.logo {
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff5073;
+  -webkit-box-flex: 1;
+}
+
+.banner .ant-menu {
+  line-height: 80px;
+}
+
+.body {
+  padding: 20px;
+  background-color: #eee;
+}
+
+.componentsBody {
+  display: -webkit-box;
+}
+
+.componentsMain {
+  margin-left: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-flex: 1;
+  padding: 15px 20px;
+}
+
+.page {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+
+.loader {
+  min-height: 300px;
+  width: inherit;
+  margin: 0px auto;
+  padding-top: 100px;
+  text-align: center;
+}

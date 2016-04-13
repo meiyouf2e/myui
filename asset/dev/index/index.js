@@ -85,7 +85,7 @@
 			render: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'page' },
 					'一个针对移动端的前端开发解决方案'
 				);
 			}
@@ -105,57 +105,66 @@
 			render: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'main' },
 					_react2.default.createElement(
 						'div',
-						{ id: 'menutree' },
+						{ className: 'banner' },
 						_react2.default.createElement(
-							_antd.Menu,
-							_defineProperty({ onClick: this.handleClick,
-								style: { width: 240 },
-								defaultOpenKeys: this.state.defaultOpenKeys,
-								selectedKeys: [this.state.current],
-								mode: 'horizontal'
-							}, 'style', { width: "100%" }),
+							'div',
+							{ className: 'logo' },
+							'MYUI'
+						),
+						_react2.default.createElement(
+							'div',
+							{ id: 'mainmenu' },
 							_react2.default.createElement(
-								_antd.Menu.Item,
-								{ key: 'index' },
+								_antd.Menu,
+								_defineProperty({ onClick: this.handleClick,
+									style: { width: 240 },
+									defaultOpenKeys: this.state.defaultOpenKeys,
+									selectedKeys: [this.state.current],
+									mode: 'horizontal'
+								}, 'style', { width: "", WebkitBoxFlex: 1, border: 0 }),
 								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/index' },
-									_react2.default.createElement(_antd.Icon, { type: 'home' }),
+									_antd.Menu.Item,
+									{ key: 'index' },
 									_react2.default.createElement(
-										'span',
-										null,
-										'首页'
+										_reactRouter.Link,
+										{ to: '/index' },
+										_react2.default.createElement(_antd.Icon, { type: 'home' }),
+										_react2.default.createElement(
+											'span',
+											null,
+											'首页'
+										)
 									)
-								)
-							),
-							_react2.default.createElement(
-								_antd.Menu.Item,
-								{ key: 'build' },
+								),
 								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/build' },
-									_react2.default.createElement(_antd.Icon, { type: 'caret-circle-o-right' }),
+									_antd.Menu.Item,
+									{ key: 'build' },
 									_react2.default.createElement(
-										'span',
-										null,
-										'构建工具'
+										_reactRouter.Link,
+										{ to: '/build' },
+										_react2.default.createElement(_antd.Icon, { type: 'caret-circle-o-right' }),
+										_react2.default.createElement(
+											'span',
+											null,
+											'构建工具'
+										)
 									)
-								)
-							),
-							_react2.default.createElement(
-								_antd.Menu.Item,
-								{ key: 'wapcomponents' },
+								),
 								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/wapcomponents' },
-									_react2.default.createElement(_antd.Icon, { type: 'appstore-o' }),
+									_antd.Menu.Item,
+									{ key: 'wapcomponents' },
 									_react2.default.createElement(
-										'span',
-										null,
-										'移动web组件'
+										_reactRouter.Link,
+										{ to: '/wapcomponents' },
+										_react2.default.createElement(_antd.Icon, { type: 'appstore-o' }),
+										_react2.default.createElement(
+											'span',
+											null,
+											'移动web组件'
+										)
 									)
 								)
 							)
@@ -163,8 +172,7 @@
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'managebody' },
-						this.props.treemenu,
+						{ className: 'body' },
 						this.props.body
 					)
 				);
@@ -174,7 +182,7 @@
 			displayName: 'Treemenu',
 			getInitialState: function getInitialState() {
 				return {
-					defaultOpenKeys: ["components"]
+					defaultOpenKeys: ["wapcomponents"]
 				};
 			},
 			handleClick: function handleClick(e) {
@@ -185,7 +193,7 @@
 			render: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'componentsBody' },
 					_react2.default.createElement(
 						'div',
 						{ id: 'menutree' },
@@ -246,9 +254,8 @@
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'managebody' },
-						this.props.treemenu,
-						this.props.body
+						{ className: 'componentsMain' },
+						this.props.cbody
 					)
 				);
 			}
@@ -261,15 +268,15 @@
 			_react2.default.createElement(
 				_reactRouter.Route,
 				{ path: '/', component: Sider },
-				_react2.default.createElement(_reactRouter.Route, { path: 'index', components: { treemenu: null, current: "index", body: Index } }),
-				_react2.default.createElement(_reactRouter.Route, { path: 'build', components: { treemenu: null, current: "build", body: Build } }),
+				_react2.default.createElement(_reactRouter.Route, { path: 'index', components: { current: "index", body: Index } }),
+				_react2.default.createElement(_reactRouter.Route, { path: 'build', components: { current: "build", body: Build } }),
 				_react2.default.createElement(
 					_reactRouter.Route,
-					{ path: 'wapcomponents', components: { treemenu: Treemenu, current: "wapcomponents" } },
-					_react2.default.createElement(_reactRouter.Route, { path: 'guide', components: { body: Guide, current2: "guide" } }),
-					_react2.default.createElement(_reactRouter.Route, { path: 'swiper', components: { body: Swiper, curren2: "swiper" } }),
-					_react2.default.createElement(_reactRouter.Route, { path: 'toast', components: { body: Toast, curren2: "toast" } }),
-					_react2.default.createElement(_reactRouter.Route, { path: 'alert', components: { body: Alert, curren2: "toast" } })
+					{ path: 'wapcomponents', components: { body: Treemenu, current: "wapcomponents" } },
+					_react2.default.createElement(_reactRouter.Route, { path: 'guide', components: { cbody: Guide, current2: "guide" } }),
+					_react2.default.createElement(_reactRouter.Route, { path: 'swiper', components: { cbody: Swiper, curren2: "swiper" } }),
+					_react2.default.createElement(_reactRouter.Route, { path: 'toast', components: { cbody: Toast, curren2: "toast" } }),
+					_react2.default.createElement(_reactRouter.Route, { path: 'alert', components: { cbody: Alert, curren2: "toast" } })
 				)
 			)
 		), document.querySelector('#router'));
@@ -71885,19 +71892,20 @@
 
 		getInitialState: function getInitialState() {
 			return {
-				children: React.createElement(_antd.Spin, null)
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader page"
 			};
 		},
 		componentDidMount: function componentDidMount() {
 			var me = this;
 			E.use("build", function () {
-				me.setState({ children: React.createElement(AsyncBuild, me.props) });
+				me.setState({ children: React.createElement(AsyncBuild, me.props), cl: "page" });
 			});
 		},
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: this.state.cl },
 				this.state.children
 			);
 		}
@@ -71918,19 +71926,20 @@
 
 		getInitialState: function getInitialState() {
 			return {
-				children: React.createElement(_antd.Spin, null)
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader"
 			};
 		},
 		componentDidMount: function componentDidMount() {
 			var me = this;
 			E.use("guide", function () {
-				me.setState({ children: React.createElement(AsyncGuide, me.props) });
+				me.setState({ children: React.createElement(AsyncGuide, me.props), cl: "" });
 			});
 		},
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: this.state.cl },
 				this.state.children
 			);
 		}
@@ -71951,19 +71960,20 @@
 
 		getInitialState: function getInitialState() {
 			return {
-				children: React.createElement(_antd.Spin, null)
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader"
 			};
 		},
 		componentDidMount: function componentDidMount() {
 			var me = this;
 			E.use("swiper", function () {
-				me.setState({ children: React.createElement(AsyncSwiper, me.props) });
+				me.setState({ children: React.createElement(AsyncSwiper, me.props), cl: "" });
 			});
 		},
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: this.state.cl },
 				this.state.children
 			);
 		}
@@ -71984,19 +71994,20 @@
 
 		getInitialState: function getInitialState() {
 			return {
-				children: React.createElement(_antd.Spin, null)
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader"
 			};
 		},
 		componentDidMount: function componentDidMount() {
 			var me = this;
 			E.use("toast", function () {
-				me.setState({ children: React.createElement(AsyncToast, me.props) });
+				me.setState({ children: React.createElement(AsyncToast, me.props), cl: "" });
 			});
 		},
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: this.state.cl },
 				this.state.children
 			);
 		}
@@ -72017,19 +72028,20 @@
 
 		getInitialState: function getInitialState() {
 			return {
-				children: React.createElement(_antd.Spin, null)
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader"
 			};
 		},
 		componentDidMount: function componentDidMount() {
 			var me = this;
 			E.use("alert", function () {
-				me.setState({ children: React.createElement(AsyncAlert, me.props) });
+				me.setState({ children: React.createElement(AsyncAlert, me.props), cl: "" });
 			});
 		},
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: this.state.cl },
 				this.state.children
 			);
 		}

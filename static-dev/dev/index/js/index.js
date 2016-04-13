@@ -20,7 +20,7 @@ $(function(){
 	E.closeLoading();
 	const Index = React.createClass({
 		render:()=>{
-			return <div>一个针对移动端的前端开发解决方案</div>
+			return <div className="page">一个针对移动端的前端开发解决方案</div>
 		}
 	});
 	const Sider = React.createClass({
@@ -36,21 +36,23 @@ $(function(){
 	  },
 	  render() {
 	    return (
-	    <div>
-	    	<div id="menutree">
-		      	<Menu onClick={this.handleClick}
-		        style={{ width: 240 }}
-		        defaultOpenKeys={this.state.defaultOpenKeys}
-		        selectedKeys={[this.state.current]}
-		        mode="horizontal"
-		        style={{width:"100%"}}>
-			       <Menu.Item key="index" ><Link to="/index"><Icon type="home" /><span>首页</span></Link></Menu.Item>
-			       <Menu.Item key="build" ><Link to="/build"><Icon type="caret-circle-o-right" /><span>构建工具</span></Link></Menu.Item>
-			       <Menu.Item key="wapcomponents" ><Link to="/wapcomponents"><Icon type="appstore-o" /><span>移动web组件</span></Link></Menu.Item>
-		     	</Menu>
+	    <div className="main">
+		    <div className="banner">
+		    	<div className="logo">MYUI</div>
+		    	<div id="mainmenu">
+			      	<Menu onClick={this.handleClick}
+			        style={{ width: 240 }}
+			        defaultOpenKeys={this.state.defaultOpenKeys}
+			        selectedKeys={[this.state.current]}
+			        mode="horizontal"
+			        style={{width:"",WebkitBoxFlex:1,border:0}}>
+				       <Menu.Item key="index" ><Link to="/index"><Icon type="home" /><span>首页</span></Link></Menu.Item>
+				       <Menu.Item key="build" ><Link to="/build"><Icon type="caret-circle-o-right" /><span>构建工具</span></Link></Menu.Item>
+				       <Menu.Item key="wapcomponents" ><Link to="/wapcomponents"><Icon type="appstore-o" /><span>移动web组件</span></Link></Menu.Item>
+			     	</Menu>
+			     </div>
 		     </div>
-		     <div className="managebody">
-		     	{this.props.treemenu}
+		     <div className="body">
 		     	{this.props.body}
 		     </div>
 	      </div>
@@ -60,7 +62,7 @@ $(function(){
 	const Treemenu = React.createClass({
 	  getInitialState() {
 	    return {
-	      defaultOpenKeys :["components"]
+	      defaultOpenKeys :["wapcomponents"]
 	    };
 	  },
 	  handleClick(e) {
@@ -70,7 +72,7 @@ $(function(){
 	  },
 	  render() {
 	    return (
-	    <div>
+	    <div className="componentsBody">
 	    	<div id="menutree">
 		      	<Menu onClick={this.handleClick}
 		        style={{ width: 240 }}
@@ -86,9 +88,8 @@ $(function(){
 					</SubMenu>
 		     	</Menu>
 		     </div>
-		     <div className="managebody">
-		     	{this.props.treemenu}
-		     	{this.props.body}
+		     <div className="componentsMain">	
+		     	{this.props.cbody}
 		     </div>
 	      </div>
 	    );
@@ -99,13 +100,13 @@ $(function(){
 		<Redirect from="/" to="/index" />
 		<Redirect from="/wapcomponents" to="/wapcomponents/guide" />
 	    <Route path="/" component={Sider}>
-	      	<Route path="index" components={{treemenu:null,current:"index",body:Index}}/>
-	      	<Route path="build" components={{treemenu:null,current:"build",body:Build}}/>
-	      	<Route path="wapcomponents" components={{treemenu:Treemenu,current:"wapcomponents"}}>
-	      		<Route path="guide" components={{body:Guide,current2:"guide"}}/>
-	      		<Route path="swiper" components={{body:Swiper,curren2:"swiper"}}/>
-	      		<Route path="toast" components={{body:Toast,curren2:"toast"}}/>
-	      		<Route path="alert" components={{body:Alert,curren2:"toast"}}/>
+	      	<Route path="index" components={{current:"index",body:Index}}/>
+	      	<Route path="build" components={{current:"build",body:Build}}/>
+	      	<Route path="wapcomponents" components={{body:Treemenu,current:"wapcomponents"}}>
+	      		<Route path="guide" components={{cbody:Guide,current2:"guide"}}/>
+	      		<Route path="swiper" components={{cbody:Swiper,curren2:"swiper"}}/>
+	      		<Route path="toast" components={{cbody:Toast,curren2:"toast"}}/>
+	      		<Route path="alert" components={{cbody:Alert,curren2:"toast"}}/>
 	      	</Route>
 	    </Route>
 	  </Router>, document.querySelector('#router'));
