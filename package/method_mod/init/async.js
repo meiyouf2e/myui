@@ -4,6 +4,6 @@ require('./xxx.scss');
 window.AsyncXxx = React.createClass({
 
 	render: function() {
-		return <div></div>;
+		return <div>Xxx</div>;
 	}
 });
