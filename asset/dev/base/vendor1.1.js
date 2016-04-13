@@ -21552,7 +21552,7 @@ var E = Easy = {
 			if(callback)callback();
 			return;
 		}
-			script.src = "/asset/dev/async/"+page+".js"+"?"+version;
+			script.src = "../asset/dev/async/"+page+".js"+"?"+version;
 		
 		script.onload = function(){
 			if(callback)callback();
