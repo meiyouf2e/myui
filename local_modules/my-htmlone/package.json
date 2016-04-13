@@ -1,0 +1,69 @@
+{
+  "name": "my-htmlone",
+  "version": "0.1.9",
+  "description": "combo js & css assests to html doc",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amfe/or.htmlone.gulp.git"
+  },
+  "keywords": [
+    "htmlone",
+    "gulp",
+    "gulpplugin"
+  ],
+  "author": {
+    "name": "cenan.chr@alibaba-inc.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amfe/or.htmlone.gulp/issues"
+  },
+  "homepage": "https://github.com/amfe/or.htmlone.gulp",
+  "dependencies": {
+    "through2": "^0.6.1",
+    "gulp-util": "^3.0.0",
+    "cheerio": "~0.17.0",
+    "fsmore": "~1.0.1",
+    "ycssmin": "^1.0.1",
+    "uglify-js": "~2.4.0",
+    "coimport": "~1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-sourcemaps": "^1.1.4",
+    "istanbul": "^0.3.2",
+    "mocha": "^2.0.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "should": "^5.0.0",
+    "stream-array": "^1.0.1",
+    "stream-assert": "^2.0.1"
+  },
+  "gitHead": "0cd5b1728a72034a6159ff8ce70768376a76b633",
+  "_id": "gulp-htmlone@0.1.9",
+  "_shasum": "e5e64aeac3cbd804ca02cd0b282f7b2fdbf28c07",
+  "_from": "gulp-htmlone@>=0.1.9 <0.2.0",
+  "_npmVersion": "2.14.2",
+  "_nodeVersion": "4.0.0",
+  "_npmUser": {
+    "name": "hongru",
+    "email": "hongru.chenhr@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "hongru",
+      "email": "hongru.chenhr@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "e5e64aeac3cbd804ca02cd0b282f7b2fdbf28c07",
+    "tarball": "http://registry.npmjs.org/gulp-htmlone/-/gulp-htmlone-0.1.9.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/gulp-htmlone/-/gulp-htmlone-0.1.9.tgz",
+  "readme": "ERROR: No README data found!"
+}

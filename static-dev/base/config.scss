@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* 色系 */
+$colorWhite: #ffffff;//白色
+$bgColorBody: #eeeeee; // body 背景色
+$colorNormal: #323232; // 默认字体色
+$colorHint: #888888; // 灰色
+$colorWarning: #ff5073; // 默认凸显色，即美柚红
+$colorWarning2: #22a5f8; // 备用凸显色，一般是 蓝色
+$colorError: #ff941e; // 错误色，一般是 红色
+$colorBorder: #dddddd; // 边框颜色
+$colorWarning3:#eb4a6a;//美柚色按钮按下颜色
+
+$colorBgGray:rgba(35,35,35,0.6);//灰色透明背景
+
+// 灰度图片的1像素 base64
+$blankURI: 'data:image/gif;base64,R0lGODlhAQABAPAAAPf39////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
+//柚子街logo图片地址
+$logoURI:'http://static.seeyouyima.com/h5.m.meiyou.com/logo/youzijie1.1.png';
+
+$border: 1px solid $colorBorder; // 常规1px边框
+
+/* 几行文字 */
+%line {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+%line-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+@for $i from 2 through 3 {
+  %line-#{$i} {
+    @extend %line;
+    -webkit-line-clamp: $i;
+  }
+}
+%buttonStyle{
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  padding:0 6px;
+  border-radius: 5px;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+%commonButton{
+
+    background-color: $colorWarning;
+    color: $colorWhite;
+    @extend %buttonStyle;
+    &:active {
+      background-color:$colorWarning3;
+    }
+}
+%commonDisableButton{
+  @extend %buttonStyle;
+  color: $colorWhite;
+  background-color: $colorHint;
+  &:active{
+    background-color: $colorHint;
+  }
+}
+%whiteButton{//白底红色字按钮
+    @extend %buttonStyle;
+    background-color: $colorWhite;
+    color: $colorWarning;
+    border:1px solid $colorWarning;
+    &:active {
+      color:$colorWhite;
+      background-color:$colorWarning;
+    }
+}
+
+%grayButton{//白底灰色字按钮
+  @extend %buttonStyle;
+  color: $colorHint;
+  text-align: center;
+  border:1px solid $colorHint;
+  &:active {
+    color:$colorWhite;
+    background-color:$colorHint;
+  }
+}
+%listlogo{
+    background:url(http://static.seeyouyima.com/h5.m.meiyou.com/logo/youzijie1.1_list.png) no-repeat;
+    background-size:18px 18px;
+    width:18px;
+    height:18px;
+    display: inline-block;
+}
+
+%subfont{
+  color:$colorHint;
+  font-size: 13px;
+}
+
+%dialogButton { // 弹窗按钮
+	overflow: hidden;
+	color: $colorWarning;
+	box-sizing: border-box;
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid $colorBorder;
+	text-align: center;
+	&:active {
+		background-color: #fff2f5;
+	}
+}
