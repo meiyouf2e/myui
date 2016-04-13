@@ -30,7 +30,7 @@ gulp.task('core.build:fixBeforeOne', () => {
 	return gulp.src(TMP_DIST.views + '/*.*')
 		.pipe(Prefix(function(uri) {
 			var pre = relativePath,
-				reg = new RegExp('/asset/(' + config.proName + '|dev)');
+				reg = new RegExp('../asset/(' + config.proName + '|dev)');
           uri.path = uri.path.replace(reg, '');
           return pre; // 最终路径：原uri.path -> pre + uri.path
       }))

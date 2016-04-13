@@ -8,7 +8,7 @@
 
 const path = require('path'),
     fs = require('fs'),
-	root = path.resolve(__dirname, '../../myui'),
+	root = path.resolve(__dirname, '../'),
 	proName = 'joint';
 
 /* 落地配置 */
@@ -58,7 +58,7 @@ var devDist = {
 
 var proDist = {
     path: path.join(root, 'asset', proName),
-    publicPath: 'http://static.seeyouyima.com/h5.m.meiyou.com/' + proName + '/',
+    publicPath: '../asset/' + proName + '/',
     views: path.join(root, 'views')
 };
 
