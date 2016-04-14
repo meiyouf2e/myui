@@ -72,7 +72,7 @@
 	var MenuItemGroup = _antd.Menu.ItemGroup;
 	var Img = __webpack_require__(583);
 	var Build = __webpack_require__(591);
-	var Frame = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"async/frame\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var Frame = __webpack_require__(592);
 	var Guide = __webpack_require__(593);
 	var Swiper = __webpack_require__(594);
 	var Toast = __webpack_require__(595);
@@ -72110,7 +72110,40 @@
 	module.exports = Build;
 
 /***/ },
-/* 592 */,
+/* 592 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _antd = __webpack_require__(161);
+
+	var Frame = React.createClass({
+		displayName: 'Frame',
+
+		getInitialState: function getInitialState() {
+			return {
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader page"
+			};
+		},
+		componentDidMount: function componentDidMount() {
+			var me = this;
+			E.use("frame", function () {
+				me.setState({ children: React.createElement(AsyncFrame, me.props), cl: "page" });
+			});
+		},
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: this.state.cl },
+				this.state.children
+			);
+		}
+	});
+
+	module.exports = Frame;
+
+/***/ },
 /* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
