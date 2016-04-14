@@ -72,11 +72,11 @@
 	var MenuItemGroup = _antd.Menu.ItemGroup;
 	var Img = __webpack_require__(583);
 	var Build = __webpack_require__(591);
-	var Frame = __webpack_require__(596);
-	var Guide = __webpack_require__(592);
-	var Swiper = __webpack_require__(593);
-	var Toast = __webpack_require__(594);
-	var Alert = __webpack_require__(595);
+	var Frame = __webpack_require__(592);
+	var Guide = __webpack_require__(593);
+	var Swiper = __webpack_require__(594);
+	var Toast = __webpack_require__(595);
+	var Alert = __webpack_require__(596);
 
 	$(function () {
 		E.closeLoading();
@@ -71937,6 +71937,40 @@
 
 	var _antd = __webpack_require__(161);
 
+	var Frame = React.createClass({
+		displayName: 'Frame',
+
+		getInitialState: function getInitialState() {
+			return {
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader"
+			};
+		},
+		componentDidMount: function componentDidMount() {
+			var me = this;
+			E.use("frame", function () {
+				me.setState({ children: React.createElement(AsyncToast, me.props), cl: "" });
+			});
+		},
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: this.state.cl },
+				this.state.children
+			);
+		}
+	});
+
+	module.exports = Frame;
+
+/***/ },
+/* 593 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _antd = __webpack_require__(161);
+
 	var Guide = React.createClass({
 		displayName: 'Guide',
 
@@ -71964,7 +71998,7 @@
 	module.exports = Guide;
 
 /***/ },
-/* 593 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -71998,7 +72032,7 @@
 	module.exports = Swiper;
 
 /***/ },
-/* 594 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -72032,7 +72066,7 @@
 	module.exports = Toast;
 
 /***/ },
-/* 595 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -72064,40 +72098,6 @@
 	});
 
 	module.exports = Alert;
-
-/***/ },
-/* 596 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _antd = __webpack_require__(161);
-
-	var Frame = React.createClass({
-		displayName: 'Frame',
-
-		getInitialState: function getInitialState() {
-			return {
-				children: React.createElement(_antd.Spin, { size: 'large' }),
-				cl: "loader"
-			};
-		},
-		componentDidMount: function componentDidMount() {
-			var me = this;
-			E.use("frame", function () {
-				me.setState({ children: React.createElement(AsyncToast, me.props), cl: "" });
-			});
-		},
-		render: function render() {
-			return React.createElement(
-				'div',
-				{ className: this.state.cl },
-				this.state.children
-			);
-		}
-	});
-
-	module.exports = Frame;
 
 /***/ }
 /******/ ]);
