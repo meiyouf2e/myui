@@ -1,16 +1,16 @@
 'use strict';
 import { Spin } from 'antd';
-const Xxx =  React.createClass({
+const Frame =  React.createClass({
 	getInitialState: function() {
 		return {
 			children: <Spin size="large"/>,
-			cl : "loader"
+			cl : "loader page"
 		};
 	},
 	componentDidMount:function(){
 		let me = this;
-		E.use("xxx",function(){
-			me.setState({children:React.createElement(AsyncXxx,me.props),cl:""})
+		E.use("frame",function(){
+			me.setState({children:React.createElement(AsyncFrame,me.props),cl:"page"})
 		});
 	},
 	render : function(){
@@ -18,4 +18,4 @@ const Xxx =  React.createClass({
 	}
 });
 
-module.exports = Xxx;
+module.exports = Frame;

@@ -46,17 +46,17 @@
 
 	'use strict';
 
-	__webpack_require__(13);
+	__webpack_require__(7);
 
-	window.AsyncToast = React.createClass({
-		displayName: 'AsyncToast',
+	window.AsyncFrame = React.createClass({
+		displayName: 'AsyncFrame',
 
 
 		render: function render() {
 			return React.createElement(
 				'div',
 				null,
-				'thisis toast'
+				'Frame'
 			);
 		}
 	});
@@ -373,19 +373,13 @@
 /***/ },
 /* 5 */,
 /* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(8);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -394,8 +388,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js?outputStyle=expanded!./toast.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js?outputStyle=expanded!./toast.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js?outputStyle=expanded!./frame.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js?outputStyle=expanded!./frame.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -405,7 +399,7 @@
 	}
 
 /***/ },
-/* 14 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
