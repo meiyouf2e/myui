@@ -22,9 +22,12 @@ $(function(){
 	const Index = React.createClass({
 		render:()=>{
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 			return <div className="page">一个针对移动端的前端开发解决方案～</div>
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 			return <div className="index">
@@ -64,7 +67,10 @@ $(function(){
 
 			</div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> master
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 		}
@@ -94,11 +100,15 @@ $(function(){
 			        style={{width:"",WebkitBoxFlex:1,border:0}}>
 				       <Menu.Item key="index" ><Link to="/index"><Icon type="home" /><span>首页</span></Link></Menu.Item>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 				       <Menu.Item key="frame" ><Link to="/frame"><Icon type="caret-circle-o-right" /><span>MYUI前端架构</span></Link></Menu.Item>
 =======
 				       <Menu.Item key="frame" ><Link to="/frame"><Icon type="inde" /><span>MYUI前端架构</span></Link></Menu.Item>
 >>>>>>> master
+=======
+				       <Menu.Item key="frame" ><Link to="/frame"><Icon type="inde" /><span>MYUI前端架构</span></Link></Menu.Item>
+>>>>>>> Stashed changes
 =======
 				       <Menu.Item key="frame" ><Link to="/frame"><Icon type="inde" /><span>MYUI前端架构</span></Link></Menu.Item>
 >>>>>>> Stashed changes
