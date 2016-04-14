@@ -10,7 +10,7 @@ const Xxx =  React.createClass({
 	componentDidMount:function(){
 		let me = this;
 		E.use("xxx",function(){
-			me.setState({children:React.createElement(AsyncToast,me.props),cl:""})
+			me.setState({children:React.createElement(AsyncXxx,me.props),cl:""})
 		});
 	},
 	render : function(){
