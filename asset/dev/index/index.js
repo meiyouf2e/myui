@@ -72,6 +72,7 @@
 	var MenuItemGroup = _antd.Menu.ItemGroup;
 	var Img = __webpack_require__(583);
 	var Build = __webpack_require__(591);
+	var Frame = __webpack_require__(596);
 	var Guide = __webpack_require__(592);
 	var Swiper = __webpack_require__(593);
 	var Toast = __webpack_require__(594);
@@ -86,7 +87,7 @@
 				return _react2.default.createElement(
 					'div',
 					{ className: 'page' },
-					'一个针对移动端的前端开发解决方案'
+					'一个针对移动端的前端开发解决方案～'
 				);
 			}
 		});
@@ -136,6 +137,20 @@
 											'span',
 											null,
 											'首页'
+										)
+									)
+								),
+								_react2.default.createElement(
+									_antd.Menu.Item,
+									{ key: 'frame' },
+									_react2.default.createElement(
+										_reactRouter.Link,
+										{ to: '/frame' },
+										_react2.default.createElement(_antd.Icon, { type: 'caret-circle-o-right' }),
+										_react2.default.createElement(
+											'span',
+											null,
+											'MYUI前端架构'
 										)
 									)
 								),
@@ -270,6 +285,7 @@
 				{ path: '/', component: Sider },
 				_react2.default.createElement(_reactRouter.Route, { path: 'index', components: { current: "index", body: Index } }),
 				_react2.default.createElement(_reactRouter.Route, { path: 'build', components: { current: "build", body: Build } }),
+				_react2.default.createElement(_reactRouter.Route, { path: 'frame', components: { current: "frame", body: Frame } }),
 				_react2.default.createElement(
 					_reactRouter.Route,
 					{ path: 'wapcomponents', components: { body: Treemenu, current: "wapcomponents" } },
@@ -72048,6 +72064,40 @@
 	});
 
 	module.exports = Alert;
+
+/***/ },
+/* 596 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _antd = __webpack_require__(161);
+
+	var Frame = React.createClass({
+		displayName: 'Frame',
+
+		getInitialState: function getInitialState() {
+			return {
+				children: React.createElement(_antd.Spin, { size: 'large' }),
+				cl: "loader"
+			};
+		},
+		componentDidMount: function componentDidMount() {
+			var me = this;
+			E.use("frame", function () {
+				me.setState({ children: React.createElement(AsyncToast, me.props), cl: "" });
+			});
+		},
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: this.state.cl },
+				this.state.children
+			);
+		}
+	});
+
+	module.exports = Frame;
 
 /***/ }
 /******/ ]);

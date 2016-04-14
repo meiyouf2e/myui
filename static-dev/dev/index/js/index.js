@@ -11,6 +11,7 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 var Img = require('plugin/img');
 var Build = require('async/build');
+var Frame = require('async/frame');
 var Guide = require('async/guide');
 var Swiper = require('async/swiper');
 var Toast = require('async/toast');
@@ -20,7 +21,7 @@ $(function(){
 	E.closeLoading();
 	const Index = React.createClass({
 		render:()=>{
-			return <div className="page">一个针对移动端的前端开发解决方案</div>
+			return <div className="page">一个针对移动端的前端开发解决方案～</div>
 		}
 	});
 	const Sider = React.createClass({
@@ -47,6 +48,7 @@ $(function(){
 			        mode="horizontal"
 			        style={{width:"",WebkitBoxFlex:1,border:0}}>
 				       <Menu.Item key="index" ><Link to="/index"><Icon type="home" /><span>首页</span></Link></Menu.Item>
+				       <Menu.Item key="frame" ><Link to="/frame"><Icon type="caret-circle-o-right" /><span>MYUI前端架构</span></Link></Menu.Item>
 				       <Menu.Item key="build" ><Link to="/build"><Icon type="caret-circle-o-right" /><span>构建工具</span></Link></Menu.Item>
 				       <Menu.Item key="wapcomponents" ><Link to="/wapcomponents"><Icon type="appstore-o" /><span>移动web组件</span></Link></Menu.Item>
 			     	</Menu>
@@ -102,6 +104,7 @@ $(function(){
 	    <Route path="/" component={Sider}>
 	      	<Route path="index" components={{current:"index",body:Index}}/>
 	      	<Route path="build" components={{current:"build",body:Build}}/>
+	      	<Route path="frame" components={{current:"frame",body:Frame}}/>
 	      	<Route path="wapcomponents" components={{body:Treemenu,current:"wapcomponents"}}>
 	      		<Route path="guide" components={{cbody:Guide,current2:"guide"}}/>
 	      		<Route path="swiper" components={{cbody:Swiper,curren2:"swiper"}}/>
