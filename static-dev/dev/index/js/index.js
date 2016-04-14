@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom';
 import { Menu ,Icon,Button,Row,Col} from "antd";
 import { Router, Route, Link,Redirect,hashHistory } from 'react-router'
 
+
+
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 var Img = require('plugin/img');
@@ -34,22 +36,22 @@ $(function(){
 				<div className="index-list">
 					<Row>
 				      <Col span="6"><div className="index-list-item">
-				      		<div className="index-list-img"><img src="/images/mbile.jpeg"/></div>
+				      		<div className="index-list-img"><img src="../../images/mbile.jpeg"/></div>
 				      		<div className="index-list-title">针对移动端</div>
 				      		<div className="index-list-des">针对移动web的前端框架，代码更适宜于移动端，充分考虑移动端性能、兼容问题、hybird开发模式等</div>
 				      </div></Col>
 				      <Col span="6"><div className="index-list-item">
-				      	<div className="index-list-img"><img src="/images/components.png"/></div>
+				      	<div className="index-list-img"><img src="../../images/components.png"/></div>
 				      	<div className="index-list-title">丰富的组件</div>
 				      	<div className="index-list-des">丰富的移动ui组件,基于h5,css3,并根据css3能力做好js动画兼容,完美兼容各种移动机型</div>
 				      </div></Col>
 				      <Col span="6"><div className="index-list-item">
-				      	<div className="index-list-img"><img src="/images/performance1.png"/></div>
+				      	<div className="index-list-img"><img src="../../images/performance1.png"/></div>
 				      	<div className="index-list-title">高性能 更智能</div>
 				      	<div className="index-list-des">努力让体验接近原生效果,并从多方位提升页面性能,引入search管理页面功能,实现智能化（切换hybird和web模式等）</div>
 				      </div></Col>
 				      <Col span="6"><div className="index-list-item">
-				     	<div className="index-list-img"><img src="/images/react.png"/></div>
+				     	<div className="index-list-img"><img src="../../images/react.png"/></div>
 				      	<div className="index-list-title">基于React</div>
 				      	<div className="index-list-des">本框架基于React,且提供了基于webpack和gulp的脚手架工具,引入hotloader,htmlone等,使创建、开发、上线更简单</div>
 				      </div></Col>

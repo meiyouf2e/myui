@@ -145,7 +145,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '/images/mbile.jpeg' })
+										_react2.default.createElement('img', { src: '../../images/mbile.jpeg' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -168,7 +168,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '/images/components.png' })
+										_react2.default.createElement('img', { src: '../../images/components.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -191,7 +191,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '/images/performance1.png' })
+										_react2.default.createElement('img', { src: '../../images/performance1.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -214,7 +214,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '/images/react.png' })
+										_react2.default.createElement('img', { src: '../../images/react.png' })
 									),
 									_react2.default.createElement(
 										'div',

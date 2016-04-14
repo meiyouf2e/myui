@@ -41,6 +41,9 @@ module.exports = {
             query: {
                 presets: ['react', 'es2015'] // 执行环境：react, 如果需要支持es2015, 那需要npm install babel-preset-es2015 -D
             }
+        },{
+            test: /\.(jpg|jpeg|png|svg|gif)$/i,
+            loader: 'my-url?limit=8192&name=[path][name]' + md5 + '.[ext]' // name=后面，是生成后的图片文件的 路径+名字
         }]
     },
     resolve: {
@@ -48,7 +51,8 @@ module.exports = {
         alias: { // 路径配置
             'plugin': SRC.plugin,
             'base': SRC.base,
-            'async': SRC.async
+            'async': SRC.async,
+            'images': path.join(config.root, 'images')
         }
     },
     plugins: plugins
