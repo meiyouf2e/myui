@@ -145,7 +145,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '../../images/mbile.jpeg' })
+										_react2.default.createElement('img', { src: '../images/mbile.jpeg' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -168,7 +168,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '../../images/components.png' })
+										_react2.default.createElement('img', { src: '../images/components.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -178,7 +178,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-des' },
-										'丰富的移动ui组件,基于h5,css3,并根据css3能力做好js动画兼容,完美兼容各种移动机型'
+										'丰富的移动ui组件,基于h5,css3,并根据css3能力测试做好js动画兼容,完美兼容各种移动机型'
 									)
 								)
 							),
@@ -191,7 +191,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '../../images/performance1.png' })
+										_react2.default.createElement('img', { src: '../images/performance1.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -214,7 +214,7 @@
 									_react2.default.createElement(
 										'div',
 										{ className: 'index-list-img' },
-										_react2.default.createElement('img', { src: '../../images/react.png' })
+										_react2.default.createElement('img', { src: '../images/react.png' })
 									),
 									_react2.default.createElement(
 										'div',
