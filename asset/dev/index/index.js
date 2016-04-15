@@ -89,7 +89,7 @@
 					{ className: 'index' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'index-top' },
+						{ className: 'index-top', style: { backgroundImage: 'url("../images/index1.jpg")', backgroundRepeat: "no-repeat" } },
 						_react2.default.createElement(
 							'div',
 							{ className: 'index-title' },
