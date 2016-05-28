@@ -41,6 +41,12 @@ module.exports = {
             query: {
                 presets: ['react', 'es2015'] // 执行环境：react, 如果需要支持es2015, 那需要npm install babel-preset-es2015 -D
             }
+        }, {
+			test: /\.md$/i,
+			loader: 'raw'
+		}, {
+            test: /\.json$/,
+            loader: 'json'
         }]
     },
     resolve: {

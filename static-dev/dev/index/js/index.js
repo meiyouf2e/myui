@@ -6,7 +6,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Menu ,Icon,Button,Row,Col} from "antd";
 import { Router, Route, Link,Redirect,hashHistory } from 'react-router'
-
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 var Img = require('plugin/img');
@@ -16,6 +15,10 @@ var Guide = require('async/guide');
 var Swiper = require('async/swiper');
 var Toast = require('async/toast');
 var Alert = require('async/alert');
+
+window.ANT = {
+	Menu
+};
 
 $(function(){
 	E.closeLoading();
@@ -131,7 +134,7 @@ $(function(){
 					</SubMenu>
 		     	</Menu>
 		     </div>
-		     <div className="componentsMain">	
+		     <div className="componentsMain">
 		     	{this.props.cbody}
 		     </div>
 	      </div>

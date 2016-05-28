@@ -1,1 +1,38 @@
 @import '../../base/config.scss';
+.async-build {
+	font-size: 14px;
+	h2,
+	h3 {
+		font-weight: bold;
+	}
+	h2 {
+	    font-size: 1.5em;
+		margin: 0.83em 0;
+	}
+	h3 {
+		font-size: 1.17em;
+		margin: 1em 0;
+	}
+	p {
+		margin: 1em 0;
+	}
+	ol {
+		list-style-type: decimal;
+		padding-left: 40px;
+	}
+	pre {
+		display: block;
+	    overflow-x: auto;
+	    padding: 0.5em;
+	    color: #333;
+	    background: #f8f8f8;
+		code {
+			padding: 0;
+		}
+	}
+	code {
+		color: #333;
+	    background: #f8f8f8;
+		padding: 0 .5em;
+	}
+}

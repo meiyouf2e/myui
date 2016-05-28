@@ -40,13 +40,14 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(7);
+	__webpack_require__(66);
 
 	window.AsyncFrame = React.createClass({
 		displayName: 'AsyncFrame',
@@ -62,9 +63,8 @@
 	});
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */
+
+/***/ 3:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -119,7 +119,8 @@
 	};
 
 /***/ },
-/* 4 */
+
+/***/ 4:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -371,15 +372,14 @@
 
 
 /***/ },
-/* 5 */,
-/* 6 */,
-/* 7 */
+
+/***/ 66:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(8);
+	var content = __webpack_require__(67);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -399,7 +399,8 @@
 	}
 
 /***/ },
-/* 8 */
+
+/***/ 67:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -413,4 +414,5 @@
 
 
 /***/ }
-/******/ ]);
+
+/******/ });
