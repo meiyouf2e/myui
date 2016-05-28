@@ -406,7 +406,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* 色系 */\n/* 几行文字 */\n.async-build {\n  font-size: 14px;\n}\n\n.async-build h2,\n.async-build h3 {\n  font-weight: bold;\n}\n\n.async-build h2 {\n  font-size: 1.5em;\n  margin: 0.83em 0;\n}\n\n.async-build h3 {\n  font-size: 1.17em;\n  margin: 1em 0;\n}\n\n.async-build p {\n  margin: 1em 0;\n}\n\n.async-build ol {\n  list-style-type: decimal;\n  padding-left: 40px;\n}\n\n.async-build pre {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n}\n\n.async-build pre code {\n  padding: 0;\n}\n\n.async-build code {\n  color: #333;\n  background: #f8f8f8;\n  padding: 0 .5em;\n}\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* 色系 */\n/* 几行文字 */\n.async-build {\n  font-size: 14px;\n  width: 1024px;\n  margin: 0 auto;\n}\n\n.async-build h2,\n.async-build h3 {\n  font-weight: bold;\n}\n\n.async-build h2 {\n  font-size: 1.5em;\n  margin: 0.83em 0;\n}\n\n.async-build h3 {\n  font-size: 1.17em;\n  margin: 1em 0;\n}\n\n.async-build p {\n  margin: 1em 0;\n}\n\n.async-build ol {\n  list-style-type: decimal;\n  padding-left: 40px;\n}\n\n.async-build pre {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n}\n\n.async-build pre code {\n  padding: 0;\n}\n\n.async-build code {\n  color: #333;\n  background: #f8f8f8;\n  padding: 0 .5em;\n}\n", ""]);
 
 	// exports
 
