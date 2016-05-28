@@ -12,13 +12,15 @@ Webpack 是必选的，因为项目中文件的依赖关系是它处理的。它
 1. 把根目录的 `gulpfile.js` 重命名为 `gulpfile.babel.js`
 2. `npm i babel-core babel-preset-es2015 -D` 引入 `babel-core` 和 `babel-preset-es2015` 这两个npm包（这里说明下，i 是 install 的简写， -D 是 --save-dev 的简写）
 3. 在 `package.json` 加入对 Es2015 的支持：
-    ```javascript
+
+	```js
 	"babel": {
         "presets": [
             "es2015"
         ]
     }
 	```
+
 ### 打包任务，分文件处理
 一个打包工具，需要处理很多的打包任务，肯定不能把所有的工作，都放在 `gulpfile.babel.js` 这一个文件里面。所以，我们把 `gulpfile.babel.js` 作为总调度，其它具体任务放在具体的指定文件。这里，在项目根目录创建一个 `package/core` 来放这些具体执行打包任务文件。比如，`pack/core/base.js` 用来打包项目的 vendor 公用基础包。 具体做法：
 
@@ -29,7 +31,7 @@ Webpack 是必选的，因为项目中文件的依赖关系是它处理的。它
 	```
 
 3. 在总调度 `gulpfile.bebel.js` 中：
-	```javascript
+	```js
 	const gulp = require('gulp'),
  		requireDir = require('require-dir');
  	requireDir('./package/core', {recurse: false}); // 不递归往文件夹里继续找
@@ -42,7 +44,7 @@ Webpack 是必选的，因为项目中文件的依赖关系是它处理的。它
 gulp 中，它执行任务都是并行的。但是，有时候，我们的任务确实需要串行执行。 这个时候，你需要一个npm包 `gulp-sequence`. 好了，我们刚才说，`package/core/base.js` 是用来打包项目公用文件的，那么一般都会有分js和css两个文件，比如：`vendor.js` 和 `vendor.css`。 此时，我们一般会把这两个任务分开处理。这里假设，打包js的任务必须先执行，那么具体怎么做呢？
 1. 首先，安装npm包 `npm i gulp-sequence -D`
 2. `package/core/base.js` 中：
-	
+
 	```javascript
 	const gulp = require('gulp'),
 		Sequence = require('gulp-sequence');
@@ -79,7 +81,7 @@ gulp 中，它执行任务都是并行的。但是，有时候，我们的任务
 	```javascript
 	const gulp = require('gulp'),
 	    browserSync = require('browser-sync').create();
-	
+
 	// Static Server + watching
 	gulp.task('core.dev:hot', () => {
 		var serveCfg = {};
@@ -89,7 +91,7 @@ gulp 中，它执行任务都是并行的。但是，有时候，我们的任务
 			serveCfg.server = './'; // 使用本地目录
 		}
 	    browserSync.init(serveCfg);
-	
+
 	    gulp.watch([SRC.views + '/*.*', DIST.path + '/**/*']).on('change', browserSync.reload); // 前面监听的文件，根据你项目的需要自己写：）
 	});
 	```
