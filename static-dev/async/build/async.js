@@ -1,9 +1,15 @@
 'use strict';
 require('./build.scss');
 
-window.AsyncBuild = React.createClass({
+const ReactMarkdown = require('react-markdown'),
+	md = require('./doc/build.md');
 
-	render: function() {
-		return <div>dasdas</div>;
+window.AsyncBuild = React.createClass({
+	render() {
+		return (
+			<div className="async-build">
+				<ReactMarkdown source={md} />
+			</div>
+		);
 	}
 });

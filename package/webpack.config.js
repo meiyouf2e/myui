@@ -41,9 +41,18 @@ module.exports = {
             query: {
                 presets: ['react', 'es2015'] // 执行环境：react, 如果需要支持es2015, 那需要npm install babel-preset-es2015 -D
             }
+<<<<<<< HEAD
         },{
             test: /\.(jpg|jpeg|png|svg|gif)$/i,
             loader: 'my-url?limit=8192&name=[path][name]' + md5 + '.[ext]' // name=后面，是生成后的图片文件的 路径+名字
+=======
+        }, {
+			test: /\.md$/i,
+			loader: 'raw'
+		}, {
+            test: /\.json$/,
+            loader: 'json'
+>>>>>>> master
         }]
     },
     resolve: {

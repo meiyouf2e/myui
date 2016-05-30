@@ -1,14 +1,14 @@
 @import '../../../base/config.scss';
 body{
-	font-family: 'Segoe UI', 'Lucida Grande', Helvetica, Arial, 'Microsoft YaHei', FreeSans, Arimo, 'Droid Sans', 'wenquanyi micro hei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', FontAwesome, sans-serif
-font-size
+	font-family: 'Segoe UI', 'Lucida Grande', Helvetica, Arial, 'Microsoft YaHei', FreeSans, Arimo, 'Droid Sans', 'wenquanyi micro hei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', FontAwesome, sans-serif;
+	font-size: 14px;
 }
 .warning{
 	color:$colorWarning;
 }
 
 .banner{
-    display: -webkit-box;	
+    display: -webkit-box;
     padding:0 20px;
 }
 .logo{
@@ -23,8 +23,8 @@ font-size
 }
 .body{
 	padding:20px 0px;
-	background-color:#eee;	
-	
+	background-color:#eee;
+
 }
 .componentsBody{
 	display: -webkit-box;

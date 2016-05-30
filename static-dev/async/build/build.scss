@@ -1,1 +1,46 @@
 @import '../../base/config.scss';
+.async-build {
+	font-size: 14px;
+	width: 1024px;
+	margin: 0 auto;
+	h2,
+	h3 {
+		font-weight: bold;
+	}
+	h2 {
+	    font-size: 1.5em;
+		margin: 0.83em 0;
+		border-bottom: 1px solid #eee;
+    	padding-bottom: 0.3em;
+	}
+	h3 {
+		font-size: 1.17em;
+		margin: 1em 0;
+	}
+	p {
+		margin: 1em 0;
+	}
+	ol {
+		list-style-type: decimal;
+		padding-left: 40px;
+	}
+	pre {
+		padding: 16px;
+	    overflow: auto;
+	    font-size: 85%;
+	    line-height: 1.45;
+	    background-color: #f7f7f7;
+	    border-radius: 3px;
+		code {
+			padding: 0;
+			background-color: transparent;
+		}
+	}
+	code {
+		padding: 0.2em;
+		margin: 0;
+		font-size: 85%;
+		background-color: rgba(0,0,0,0.04);
+		border-radius: 3px;
+	}
+}
